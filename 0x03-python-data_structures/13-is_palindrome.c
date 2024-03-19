@@ -31,5 +31,3 @@ int is_palindrome(listint_t **head)
 	reverse(&l);
 	x = compare_lists(*head,alf, l);
 	return(x);
-
-
