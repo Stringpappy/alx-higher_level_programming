@@ -5,4 +5,3 @@ def multiple_returns(sentence):
         return 0, None
     if j > 0:
         return j, sentence[0]
-

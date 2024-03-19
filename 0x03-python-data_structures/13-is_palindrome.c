@@ -1,5 +1,5 @@
 #include "list.h"
-#iclude <stdio.h>
+#include <stdio.h>
 /**
  * is_pelindrome - func that check if a siglry list is pelindrome
  * @list: struct
