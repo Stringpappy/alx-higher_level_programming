@@ -9,4 +9,4 @@ if __name__ == "__main__":
     else:
         print(f"{num} argument")
     for count in range(num):
-        print(f"{count + 1 }: {argv[count + 1]} arguments")
+        print("{}: {:s}".format(count + 1, argv[count + 1]))
