@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    for arr in sorted(a_dictionary)
-    print(f"{key} {a_dictionary)
+    my_list = list(a_dictionary.keys())
+    my_list.sort()
+    for i in my_list:
+        print(f"{i}: {a_dictionary.get(i)}")
