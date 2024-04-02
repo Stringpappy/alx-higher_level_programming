@@ -6,9 +6,9 @@ def magic_calculation(a, b):
     for i in range(1, 3):
         try:
             if i > a:
-                raise Excetion("Toofar")
+                raise Excetion("Too far")
             else:
-                glb += a ** b
+                glb += a ** b / i
         except Exception:
             glb = a+b
             break
