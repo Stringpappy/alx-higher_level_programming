@@ -12,4 +12,3 @@ def magic_calculation(a, b):
             glb = a + b
             break
     return glb
-
