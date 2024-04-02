@@ -2,7 +2,7 @@
 def safe_print_division(a, b):
     try:
         div = a / b
-    except(IndexError, ValueError:
+    except(IndexError, ValueError):
         div = None
     except(TypeError, ZeroDivisionError):
         div = None
