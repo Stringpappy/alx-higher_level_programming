@@ -2,10 +2,10 @@
 """python3 -c 'print(__import__("my_module").__doc__)'"""
 def print_square(size):
     """ python3 -c 'print(__import__("my_module").my_function.__doc__)'"""
-    if ((not isinstance(size, int))):
+    if not isinstance(size, int):
         raise TypeError("size must be an integer")
-    if ((not isinstance((size < 0)))):
+    if size < 0:
         raise ValueError("size must be >= 0")
-    if ((not isinstance(size < 0) and not (isinstance(size, float)))):
-        raise ValueError("size must be an integer")
-    print("#" * size)
+    for x in range(size):
+        [print("#", end="") for y in range(size)]
+        print("")
