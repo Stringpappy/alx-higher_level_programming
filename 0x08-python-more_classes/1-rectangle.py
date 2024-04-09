@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""class that define a rectangle"""
+"""class that define an empty rectangle"""
+
 
 class Rectangle:
     """super class of width and height"""
