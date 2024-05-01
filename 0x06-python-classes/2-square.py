@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""python3 -c 'print(__import__("my_module").MyClass.__doc__)')"""
+"""an empty suare"""
+
+
 class Square:
-    """define a class square"""
-    def __init__ (self.size=0):
+    """empty suare"""
+
+
+    def __init__ (self,size=0):
+        self.__size = size
         """intialise new square"""
         if not isinstance(size,int):
-            rause TypeError("size must be an integer")
-        elif size < 0):
+            raise TypeError("size must be an integer")
+        if size < 0:
             raise ValueError("size must be >= 0")
