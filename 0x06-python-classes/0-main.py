@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""an empty suare"""
+Square = __import__('0-square').Square
 
-
-class Square:
-    """empty suare"""
-    pass
+my_square = Square()
+print(type(my_square))
+print(my_square.__dict__)
