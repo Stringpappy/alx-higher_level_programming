@@ -5,9 +5,11 @@
 class BaseGeometry:
     """super cass!"""
 
-    def __init__(self, width, height):
+    def __init__(self, width, height, value):
         """initalising"""
-        self.
+        self.width = width
+        self.height = height
+        self.value = value
     def area(self):
         """way to compute the area"""
         raise Exception("area() is not implemented")
