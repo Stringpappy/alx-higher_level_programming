@@ -4,4 +4,4 @@ for num in range(0, 10):
         if num == 8 and numb == 9:
             print("89")
         else:
-            print("{:d}{:d} ," .format(num,numb), end='')
+            print("{:d}{:d}, ".format(num, numb), end='')
