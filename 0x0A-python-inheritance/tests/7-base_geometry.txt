@@ -13,10 +13,10 @@
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ... 
-[ValueError] age must be greater than 0
+[ValueError] age must begreater than 0
 >>> try:
 ...     bg.integer_validator("distance", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ... 
-[ValueError] distance must be greater than 0
+[ValueError] distance must begreater than 0
