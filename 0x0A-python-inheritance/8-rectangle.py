@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+""" rectangle module"""
+
+
 class BaseGeometry:
     """super cass!"""
 
@@ -18,6 +22,7 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 class Rectangle(BaseGeometry):
+    """class rectangle that inherit from the class BaseGeometry"""
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
