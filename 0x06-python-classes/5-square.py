@@ -1,32 +1,36 @@
 #!/usr/bin/python3
-"""python3 -c 'print(__import__("my_module").MyClass.__doc__)')"""
+"""an empty suare"""
+
+
 class Square:
-    """ define a  square"""
+    """empty suare"""
+
     def __init__(self, size=0):
-        """initialise  the new squsre"""
-        self.dize = size
+        """initialising"""
+        self.__size = size
 
     @property
     def size(self):
-        """the size of the square"""
-        return (self.__size)
+        """property setter"""
+        return self.__size
 
     @size.setter
     def size(self, value):
+        """set the value"""
         if not isinstance(value, int):
-            raise("size must be an integer")
-        if value < 0:
+            raise TypeError("size must be an integer")
+        elif value < 0:
             raise ValueError("size must be >= 0")
-            self.__size = value
+        self.__size = value
 
     def area(self):
-        """the area of the square"""
-        return (self.__size * self.__size)
-        
+        """return square of a num"""
+        return self.__size ** 2
+
     def my_print(self):
-        """square with # character"""
-        for i in range(0, self.__size):
-            [print("#", end="") for j in range(self.__size)]
-            print("")
-            if self.__size  == 0:
-                print("")
+        """print # instead of of the output"""
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print("#" * self.__size)
