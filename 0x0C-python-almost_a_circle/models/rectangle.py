@@ -2,6 +2,7 @@
 """rectangle module"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class that  inherits from Base"""
 
@@ -52,4 +53,3 @@ class Rectangle(Base):
     def y(self, value):
         """Setter y"""
         self.__y = value
-
