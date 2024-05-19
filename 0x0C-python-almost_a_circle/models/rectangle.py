@@ -21,10 +21,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """Setter height attribute"""
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError(f"width must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError(f"width must be > 0")
         self._width = value
 
     @property
@@ -50,9 +51,9 @@ class Rectangle(Base):
     def x(self, value):
         """Setter x"""
         if not isinstance(value, int):
-            raise TypeError("x must be an integer")
-        if value <  0:
-            raise ValueError(f"x must be >= 0")
+            raise TypeError(f"height must be an integer")
+        if value < 0:
+             raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -64,35 +65,12 @@ class Rectangle(Base):
     def y(self, value):
         """Setter y"""
         if not isinstance(value, int):
-            raise TypeError(f"y must be an integer")
-        if valuee <  0:
-            raise ValueError(f"y must be >= 0")
+            raise TypeError(f"height must be an integer")
+        if value < 0:
+             raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
-        return self.width * self.height
+        """return th area of rect"""
+        return self.width * self.heighet
 
-    def display(self):
-        for _ in range(self.height):
-            print("#" * self.width)
-     
-     def __str__(self):
-        return f"Rectangle(width={self.width}, height={self.height}, x={self.x}, y={self.y})
-        "
-
-    def update(self, *args):
-        """update"""
-    l = len(args)
-    if l >= 1:
-        self.id = args[0]
-    if l >= 2:
-        self.width = args[1]
-    if l >= 3:
-        self.height = args[2]
-    if l >= 4:
-        self.x = args[3]
-    if l >= 5:
-        self.y = args[4]
-
-    def perimeter(self):
-        return 2 * (self.width + self.height)
