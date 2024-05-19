@@ -53,7 +53,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError(f"height must be an integer")
         if value < 0:
-             raise ValueError("x must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -67,7 +67,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError(f"height must be an integer")
         if value < 0:
-             raise ValueError("y must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
@@ -76,26 +76,27 @@ class Rectangle(Base):
 
     def display(self):
         """print # instead of value"""
-        for l in range(self.__height):
+        for val in range(self.__height):
             print("#" * self.__width)
 
     def __str__(self):
         """return rect, id, x/y"""
-        return f"[Rectangle] ({id(self)}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle]({id(self)}) {self.__x}/{self.__y}\
+    - {self.__width}/{self.__height}"
 
     def update(self, *args):
         """assigns an argument to each attribute:"""
         if args:
-            l = len(args)
-            if l > 0:
+            lent = len(args)
+            if lent > 0:
                 self.__id = args[0]
-            if l > 1:
+            if lent > 1:
                 self.__width = args[1]
-            if l > 2:
+            if lent > 2:
                 self.__height = args[2]
-            if l > 3:
+            if lent > 3:
                 self.__x = args[3]
-            if l > 4:
+            if lent > 4:
                 self.__y = args[4]
         else:
             for key, value in kwargs.item():
