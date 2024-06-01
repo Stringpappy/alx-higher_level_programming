@@ -44,22 +44,8 @@ class Rectangle:
         if self.__width == 0:
             return 0
         else:
-            p = 2 * (self.width + self.height)
-            return p
+            return self.__width * self.__height
 
-
-    def __str__(self):
-        """ Returns a string representation of the rectangle with # characters."""
-        if self.width == 0 or self.height == 0:
-            return ""
-
-        rectangle_str = ""
-        for x in range(self.height):
-            rectangle_str += "#" * self.width + "\n"
-        return rectangle_str
-
-    def __repr__(self):
-        """
-        Returns a string representation of the rectangile object.
-        """
-        return (f"Rectangle(width={self.width}, height={self.height}")
+        def __str__(self):
+            if self.width == 0 | self.__height == 0:
+                return ""
