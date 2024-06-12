@@ -1,30 +1,39 @@
 #include "lists.h"
 /**
- * insert_node -  funct in C that inserts number into sorted singly linked list
- * @heaad: pointer to the firstnoode
- * @num ber: number to be inserted
+ * insert_node - func hat inserts number into sorted singly linked list
+ * @head: pointer to the firstnoode
+ * @number: number to be inserted
  * Return: 0
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *current;
-	 listint_t *Node;
+	listint_t *in_node, *nodee;
 
-	 Node == malloc(sizeof(listint_t));
+	if (head == NULL)
+		return (NULL);
 
-	 if (*head == NULL || (*head)->n >= number)
-	 {
-		 Node->next = *head;
-		 *head = Node;
-		 return Node;
-	 }
-	 current == malloc(sizeof(listint_t));
-	 while (current->next != NULL && current->next->n < number)
-	 {
-		 current = current->next;
-	 }
-	 Node->next = current->next;
-	 current->next = Node;
+	in_node = malloc(sizeof(listint_t));
+	if (in_node == NULL)
+		return (NULL);
 
-	 return Node;
+	in_node->n = number;
+	in_node->next = NULL;
+
+	if (*head == NULL || (*head)->n >= number)
+	{
+		in_node->next = *head;
+		*head = in_node;
+		return (in_node);
+	}
+
+	nodee = *head;
+	while (nodee->next != NULL && nodee->next->n < number)
+	{
+		nodee = nodee->next;
+	}
+
+	in_node->next = nodee->next;
+	nodee->next = in_node;
+
+	return (in_node);
 }
