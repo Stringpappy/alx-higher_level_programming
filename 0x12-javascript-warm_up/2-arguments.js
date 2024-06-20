@@ -1,12 +1,13 @@
 #!/usr/bin/node
 /* script that prints a message depending of num oof arg */
 
-const args = process.argv;
+const arg_passed = process.argv;
+const x = arg_passed.length;
 
-if (args.length <= 2) {
+if (x <= 2) {
   console.log('No argument');
-} else if (args.lenght === 3) {
-  console.log('Arguments found');
+} else if (x == 3) {
+  console.log('Argument found');
 } else {
   console.log('Arguments found');
 }
