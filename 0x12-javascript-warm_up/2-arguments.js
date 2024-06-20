@@ -1,8 +1,8 @@
 #!/usr/bin/node
 /* script that prints a message depending of num oof arg */
 
-const arg_passed = process.argv;
-const x = arg_passed.length;
+const args = process.argv;
+const x = args.length;
 
 if (x <= 2) {
   console.log('No argument');
