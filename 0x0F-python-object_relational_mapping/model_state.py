@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """
-import modules and  declare class that inherite from base, declarative_base()
+Iimporting modeles, Contains State class and Base, an instance of declarative_base()
 """
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
-metaldata_det = MetaData()
-Base = declarative_base(metadata=metadata_det)
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
     """
-    declaring  class with id and name attributes of each state
+    Class with id and name attributes of each state
     """
     __tablename__ = 'states'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
