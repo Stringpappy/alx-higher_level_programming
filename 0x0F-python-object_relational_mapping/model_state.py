@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 """
-Import necessary modules from SQLAlchemy and define City class.
-"""
+Import modules from SQLAlchemy """
 from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 
 class City(Base):
-     """
-    SQLAlchemy model for cities table.
+     """ SQLAlchemy model for cities table.
     """
     __tablename__ = 'cities'
     id = Column(Integer, unique=True, nullable=False, primary_key=True)
