@@ -26,7 +26,7 @@ class Student:
         return dict_new
 
     def reload_from_json(self, json):
-        "" to "replaces all attributes of the Student instance"""
+        """to replaces all attributes of the Student instance"""
         for args in json:
             try:
                 setattr(self, args, json[key])
