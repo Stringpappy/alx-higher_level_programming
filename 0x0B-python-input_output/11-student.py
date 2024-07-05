@@ -15,10 +15,10 @@ class Student:
     def to_json(self, attrs=None):
         """to returns a dictionary representation of a Student instance
         with the listed attribute attributes"""
-        if att is None:
+        if attrs is None:
             return self.__dict__
         dict_new = {}
-        for arg in att:
+        for arg in attrs:
             try:
                 dict_new[arg] = self.__dict__[arg]
             except FileNotFoundError:
@@ -29,6 +29,6 @@ class Student:
         """to replaces all attributes of the Student instance"""
         for args in json:
             try:
-                setattr(self, args, json[key])
+                setattr(self, args, json[args])
             except FileNotFoundError:
                 pass
