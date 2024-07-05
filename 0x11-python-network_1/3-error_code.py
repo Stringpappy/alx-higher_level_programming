@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-python script that Sends a request to a given URL &&  displays the response body.
+python script that Sends a request to a given URL &&
+displays the response body.
 Usage: ./3-error_code.py <URL>
   - Handles HTTP errors.
 """
