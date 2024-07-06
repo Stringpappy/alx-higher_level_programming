@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-python script that contains the "append after" function
-"""
+"""python script that contains the "append after" function"""
 
 
 def append_after(filename="", search_string="", new_string=""):
