@@ -19,7 +19,7 @@ class Rectangle(Base):
         """Getter for width attribute"""
         return self.__width
 
-     @width.setter
+    @width.setter
     def width(self, value):
         """setter for width"""
         if not isinstance(value, int):
