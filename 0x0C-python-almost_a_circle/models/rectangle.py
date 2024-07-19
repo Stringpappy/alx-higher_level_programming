@@ -41,14 +41,23 @@ class Rectangle(Base):
         """Getter for height attribute"""
         return self.__height
 
+    #@height.setter
+    #def height(self, value):
+    #    """Setter height attribute"""
+    #    if not isinstance(value, int):
+    #        raise TypeError(f"height must be an integer")
+    #    if value <= 0:
+    #        raise ValueError(f"height must be > 0")
+    #    self.__height = value
+    
     @height.setter
     def height(self, value):
-        """Setter height attribute"""
-        if not isinstance(value, int):
-            raise TypeError(f"height must be an integer")
+        if type(value) != int:
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError(f"height must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
+
 
     @property
     def x(self):
