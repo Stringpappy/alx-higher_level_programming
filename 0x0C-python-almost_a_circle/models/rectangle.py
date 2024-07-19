@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""rectangle module"""
+""" rectangle module"""
 from models.base import Base
 
 
@@ -19,14 +19,14 @@ class Rectangle(Base):
         """Getter for width attribute"""
         return self.__width
 
-    @width.setter
+     @width.setter
     def width(self, value):
-        """Setter height attribute"""
         if not isinstance(value, int):
-            raise TypeError(f"width must be an integer")
-        if value <= 0:
-            raise ValueError(f"width must be > 0")
-        self.__width = value
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        self._width = value
+
 
     @property
     def height(self):
